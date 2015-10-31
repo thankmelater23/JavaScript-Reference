@@ -62,10 +62,57 @@
 		<!--Strings-->
 		var randStr = "A long " + "String that " + "goes on and on"
 		document.write(randStr + "<br />");
-		document.write("String length", randStr.length + "<br />")
+		document.write("String length ", randStr.length + "<br />")
 		document.write("Index for \"that\": ", randStr.indexOf("that"), "<br />");
-		</script>
+		document.write(randStr.slice(14), "<br />");
+		document.write(randStr.slice(14, 14), "<br />");
+		document.write(randStr.slice(14, 19), " Takes string from a to b <br />");
+		document.write(randStr.substr(14, 5), " gets n strings after selected index" + "<br />");
+		document.write(randStr.replace("on and on", 'nutts') + "<br />");
+		document.write("At index 2:", randStr.charAt(2) + "<br />");
 
+		var randStrArray = randStr.split(" ");
+		randStr = randStr.trim();
+
+		document.write(randStr.toUpperCase() + "<br />");
+		document.write(randStr.toLowerCase() + "<br />");
+
+		document.write("These are functions that style code eg: big, bold, fontcolor, fontsize, italics, link, small, strike, sub, sup: <br />", randStr.fontcolor("red").bold().italics().fontsize("5em") + "<br />");
+
+
+		"<br />"
+		<!--Conditionals-->
+		document.write("Relational Type: ===(value and type match) ==(value match) != > < >= <=" + "<br />");
+		document.write("Logical Operators: && || !" + "<br />");
+		document.write("wont write any ref code for this very familiar" + "<br />");
+
+		document.write("true || false: ", true || false,  + "<br />");
+		document.write("!true: ", !true  + "<br />");
+
+		document.write("<br />", "\"5\" == 5 = ", ("5" == 5)  + "<br />");
+		document.write("<br />", "\"5\" === 5 = ", ("5" === 5)  + "<br />");
+		"<br />"
+
+		<!--Switch Statements-->
+		var age = 28
+
+		switch(age) {
+			case  28:
+			case  30:
+			document.write("Middle aged");
+				break;
+			case 40:
+			document.write("fouty");
+			break;
+			case 5:
+			case 10:
+			document.write("Little kid");
+			break;
+
+			default:
+			document.write("Some age we didnt mention");
+		}
+			</script
 
 
 
