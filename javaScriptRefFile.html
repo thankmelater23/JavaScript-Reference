@@ -99,23 +99,73 @@
 		switch(age) {
 			case  28:
 			case  30:
-			document.write("Middle aged");
+			document.write("Middle aged", "<br />");
 				break;
 			case 40:
-			document.write("fouty");
+			document.write("fouty", "<br />");
 			break;
 			case 5:
 			case 10:
-			document.write("Little kid");
+			document.write("Little kid", "<br />");
 			break;
 
 			default:
-			document.write("Some age we didnt mention");
+			document.write("Some age we didnt mention", "<br />");
 		}
+		"<br />"
+			<!--Loops-->
+
+			do{
+				var guess = prompt("Guess a number between 1 and 20");
+			}while(guess != 15);
+
+			alert("You guessed 15", "<br />");
+
+			var person = {name: "Andre Villanueva", sex: "male", age: 28, cash: 0.0};
+
+			for(attribute in person){
+				document.write(attribute, ": ", person[attribute], "<br />");
+			}
+			
+			<!--Arrays-->
+			"<br />"
+
+			var tomSmith = ["tom", "Smith", "home", 400, "the"];
+			document.write(tomSmith[0], "<br />");
+
+			tomSmith[3] = "tom now equals this string" + "<br />"
+			document.write(tomSmith[3]);
+
+			tomSmith.splice(2, 1, "Los Angeles", "Ca");
+			tomSmith.splice(4, 1);
+
+			document.write("Array: ", tomSmith.valueOf(), "<br />");
+			document.write("Array: ", tomSmith.join(", "), "<br />");
+
+			delete tomSmith[3];
+
+			tomSmith.sort(function(x, y){return x - y});
+
+			var nums = [5, 3, 1, 534, 64, 2, 0];
+			nums.sort()
+			document.write("Num array : " + nums.toString() + "<br />");
+
+			var combinedArray = nums.concat(tomSmith);
+
+			tomSmith.pop()
+
+			tomSmith.push("xxx-xxx-xxx");
+
+			tomSmith.shift();
+			tomSmith.unshift("Ca");
+			
+			document.write("Array: ", tomSmith.join(", "), "<br />");
+			<!--Functions-->
+
+
 			</script
 
-
-
+			
 
 
 
