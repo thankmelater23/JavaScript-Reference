@@ -2,9 +2,10 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8">
+		<script src="Andre.js"></script>
 		<style type="text/css">
 		body{font-size: 1.6em;}
-		.hidden{display:none;}
+		.hidden{display:none;
 		.show{display:inline !important;}
 		button{
 			border: 2px solid black; background: #e5e4e2;
@@ -12,3 +13,39 @@
 			padding: .8em 2em;
 			margin-top: .4em;
 			}
+		</style>
+	</head>
+	<body>
+	<!--Leasson one-->
+		<p id="sayHello"></p>
+	
+		<script>
+	
+		var yourName = prompt("What is your Name?");
+	
+		if(yourName != null){
+			document.getElementById('sayHello').innerHTML = "Hello " + yourName;
+		}else{
+			alert("please enter a name next time");
+		}
+		<!--Variables-->
+		var varName = "Dre"
+		var varInt = 10
+
+		var newVar = varName + varInt	
+		alert(newVar);
+
+		<!--Math Functions-->
+		document.write("5 + 4 = ", 5 + 4, "<br/>");
+		document.write("5 + 4 = " + 5 + 4, "<br />");
+
+		document.write("Max num", Number.MAX_VALUE, "<br />");
+		document.write("Min num", Number.MIN_VALUE, "<br />");
+
+		<!--to.Fixed(digitsWanted) sets fload/doable to only n digits-->
+		var balance = 1563.87
+		document.write("Float precesion", (balance / 12).toFixed(2), "<br />");
+
+		</script>
+	</body>
+</html>
