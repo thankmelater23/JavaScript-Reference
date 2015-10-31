@@ -2,7 +2,7 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8">
-		<script src="Andre.js"></script>
+		<script src="AndreJS.js"></script>
 		<style type="text/css">
 		body{font-size: 1.6em;}
 		.hidden{display:none;
@@ -20,7 +20,6 @@
 		<p id="sayHello"></p>
 	
 		<script>
-	
 		var yourName = prompt("What is your Name?");
 	
 		if(yourName != null){
@@ -28,6 +27,7 @@
 		}else{
 			alert("please enter a name next time");
 		}
+		
 		<!--Variables-->
 		var varName = "Dre"
 		var varInt = 10
@@ -35,7 +35,7 @@
 		var newVar = varName + varInt	
 		alert(newVar);
 
-		<!--Math Functions-->
+		<!--Math Functions--> <br/><br/>
 		document.write("5 + 4 = ", 5 + 4, "<br/>");
 		document.write("5 + 4 = " + 5 + 4, "<br />");
 
@@ -46,6 +46,33 @@
 		var balance = 1563.87
 		document.write("Float precesion", (balance / 12).toFixed(2), "<br />");
 
+		var randNum = 5;
+		document.write("++Random = ", ++randNum, "<br />");
+
+		document.write("Math function absoulout value", Math.abs(-10), " <br />");
+		document.write("Math function rounds number to nearest int", Math.round(7.384), " <br />");
+		document.write("Math function rounds number to nearest int", Math.round(7.798), " <br />");
+		document.write("Randomizer function ", Math.floor((Math.random() * 10) + 1), " <br />");
+
+		document.write("Randomizer function ", Math.floor((Math.random() * 100) + 50), " <br />");
+
+		document.write("Convert String To Number ", Number("9110024"), " <br />");
+
+		"<br />"
+		<!--Strings-->
+		var randStr = "A long " + "String that " + "goes on and on"
+		document.write(randStr + "<br />");
+		document.write("String length", randStr.length + "<br />")
+		document.write("Index for \"that\": ", randStr.indexOf("that"), "<br />");
 		</script>
+
+
+
+
+
+
+
+		
 	</body>
+
 </html>
