@@ -16,12 +16,12 @@
 		</style>
 	</head>
 	<body>
-	<!--Leasson one-->
+		<!--Leasson one-->
 		<p id="sayHello"></p>
-	
+		
 		<script>
 		var yourName = prompt("What is your Name?");
-	
+		
 		if(yourName != null){
 			document.getElementById('sayHello').innerHTML = "Hello " + yourName;
 		}else{
@@ -31,33 +31,24 @@
 		<!--Variables-->
 		var varName = "Dre"
 		var varInt = 10
-
-		var newVar = varName + varInt	
+		var newVar = varName + varInt
 		alert(newVar);
-
 		<!--Math Functions--> <br/><br/>
 		document.write("5 + 4 = ", 5 + 4, "<br/>");
 		document.write("5 + 4 = " + 5 + 4, "<br />");
-
 		document.write("Max num", Number.MAX_VALUE, "<br />");
 		document.write("Min num", Number.MIN_VALUE, "<br />");
-
 		<!--to.Fixed(digitsWanted) sets fload/doable to only n digits-->
 		var balance = 1563.87
 		document.write("Float precesion", (balance / 12).toFixed(2), "<br />");
-
 		var randNum = 5;
 		document.write("++Random = ", ++randNum, "<br />");
-
 		document.write("Math function absoulout value", Math.abs(-10), " <br />");
 		document.write("Math function rounds number to nearest int", Math.round(7.384), " <br />");
 		document.write("Math function rounds number to nearest int", Math.round(7.798), " <br />");
 		document.write("Randomizer function ", Math.floor((Math.random() * 10) + 1), " <br />");
-
 		document.write("Randomizer function ", Math.floor((Math.random() * 100) + 50), " <br />");
-
 		document.write("Convert String To Number ", Number("9110024"), " <br />");
-
 		"<br />"
 		<!--Strings-->
 		var randStr = "A long " + "String that " + "goes on and on"
@@ -70,151 +61,120 @@
 		document.write(randStr.substr(14, 5), " gets n strings after selected index" + "<br />");
 		document.write(randStr.replace("on and on", 'nutts') + "<br />");
 		document.write("At index 2:", randStr.charAt(2) + "<br />");
-
 		var randStrArray = randStr.split(" ");
 		randStr = randStr.trim();
-
 		document.write(randStr.toUpperCase() + "<br />");
 		document.write(randStr.toLowerCase() + "<br />");
-
 		document.write("These are functions that style code eg: big, bold, fontcolor, fontsize, italics, link, small, strike, sub, sup: <br />", randStr.fontcolor("red").bold().italics().fontsize("5em") + "<br />");
-
-
 		"<br />"
 		<!--Conditionals-->
 		document.write("Relational Type: ===(value and type match) ==(value match) != > < >= <=" + "<br />");
 		document.write("Logical Operators: && || !" + "<br />");
 		document.write("wont write any ref code for this very familiar" + "<br />");
-
 		document.write("true || false: ", true || false,  + "<br />");
 		document.write("!true: ", !true  + "<br />");
-
 		document.write("<br />", "\"5\" == 5 = ", ("5" == 5)  + "<br />");
 		document.write("<br />", "\"5\" === 5 = ", ("5" === 5)  + "<br />");
 		"<br />"
-
 		<!--Switch Statements-->
 		var age = 28
-
 		switch(age) {
-			case  28:
-			case  30:
-			document.write("Middle aged", "<br />");
-				break;
-			case 40:
-			document.write("fouty", "<br />");
-			break;
-			case 5:
-			case 10:
-			document.write("Little kid", "<br />");
-			break;
-
-			default:
-			document.write("Some age we didnt mention", "<br />");
+		case  28:
+		case  30:
+		document.write("Middle aged", "<br />");
+		break;
+		case 40:
+		document.write("fouty", "<br />");
+		break;
+		case 5:
+		case 10:
+		document.write("Little kid", "<br />");
+		break;
+		default:
+		document.write("Some age we didnt mention", "<br />");
 		}
 		"<br />"
-			<!--Loops-->
+		<!--Loops-->
+		do{
+		var guess = prompt("Guess a number between 1 and 20");
+		}while(guess == 15);
+		alert("You didn't guessed 15", "<br />");
+		var person = {name: "Andre Villanueva", sex: "male", age: 28, cash: 0.0};
+		for(attribute in person){
+		document.write(attribute, ": ", person[attribute], "<br />");
+		}
+		
+		<!--Arrays-->
+		"<br />"
+		var tomSmith = ["tom", "Smith", "home", 400, "the"];
+		document.write(tomSmith[0], "<br />");
+		tomSmith[3] = "tom now equals this string" + "<br />"
+		document.write(tomSmith[3]);
+		tomSmith.splice(2, 1, "Los Angeles", "Ca");
+		tomSmith.splice(4, 1);
+		document.write("Array: ", tomSmith.valueOf(), "<br />");
+		document.write("Array: ", tomSmith.join(", "), "<br />");
+		delete tomSmith[3];
+		tomSmith.sort(function(x, y){return x - y});
+		var nums = [5, 3, 1, 534, 64, 2, 0];
+		nums.sort()
+		document.write("Num array : " + nums.toString() + "<br />");
+		var combinedArray = nums.concat(tomSmith);
+		tomSmith.pop()
+		tomSmith.push("xxx-xxx-xxx");
+		tomSmith.shift();
+		tomSmith.unshift("Ca");
+		
+		document.write("Array: ", tomSmith.join(", "), "<br />");
+		
+		<!--Functions-->
+		function inArray(arrayToCheck, value){
+		for(i = 0; i < arrayToCheck.length; i++){
+		if(arrayToCheck[i] === value){
+		return true;
+		}
+		}
+		return false
+		}
+		var randArray = [1,2,3,4,5];
+		document.write("In array : ", inArray(randArray, 3), "<br />");
+		function times2(num){
+		var var2 = 2;
+		return num * var2;
+		}
+		function multiply(func, num){
+		return func(num);
+		}
+		var triple = function(num){
+		return num * 3;
+		}
+		document.write("3 * 45 = ", multiply(triple, 45), "<br />");
+		function getSum(){
+		var sum = 0;
+		for(i = 0; i < arguments.length; i++){
+		sum += arguments[i];
+		}
+		return sum;
+		}
+		document.write("Sum = ", getSum(1, 2, 3, 4, 5, 6), "<br />");
+		function times2(theArray){
+		var newArray = [];
+		for(i = 0; i < theArray.length; i++){
+		newArray.push(theArray[i] * 2);
+		}
+		return newArray
+		}
+		<!--Event Handling-->
+		//http://www.w3schools.com/jsref/dom_obj_event.asp
+		
+		function openAlert(mess){
+			alert(mess);
+		}
 
-			do{
-				var guess = prompt("Guess a number between 1 and 20");
-			}while(guess == 15);
 
-			alert("You didn't guessed 15", "<br />");
-
-			var person = {name: "Andre Villanueva", sex: "male", age: 28, cash: 0.0};
-
-			for(attribute in person){
-				document.write(attribute, ": ", person[attribute], "<br />");
-			}
-			
-			<!--Arrays-->
-			"<br />"
-
-			var tomSmith = ["tom", "Smith", "home", 400, "the"];
-			document.write(tomSmith[0], "<br />");
-
-			tomSmith[3] = "tom now equals this string" + "<br />"
-			document.write(tomSmith[3]);
-
-			tomSmith.splice(2, 1, "Los Angeles", "Ca");
-			tomSmith.splice(4, 1);
-
-			document.write("Array: ", tomSmith.valueOf(), "<br />");
-			document.write("Array: ", tomSmith.join(", "), "<br />");
-
-			delete tomSmith[3];
-
-			tomSmith.sort(function(x, y){return x - y});
-
-			var nums = [5, 3, 1, 534, 64, 2, 0];
-			nums.sort()
-			document.write("Num array : " + nums.toString() + "<br />");
-
-			var combinedArray = nums.concat(tomSmith);
-
-			tomSmith.pop()
-
-			tomSmith.push("xxx-xxx-xxx");
-
-			tomSmith.shift();
-			tomSmith.unshift("Ca");
-			
-			document.write("Array: ", tomSmith.join(", "), "<br />");
-			
-
-			<!--Functions-->
-
-			function inArray(arrayToCheck, value){
-				for(i = 0; i < arrayToCheck.length; i++){
-					if(arrayToCheck[i] === value){
-						return true;
-					}
-				}
-				return false
-			}
-
-			var randArray = [1,2,3,4,5];
-
-
-
-			document.write("In array : ", inArray(randArray, 3), "<br />");
-
-			function times2(num){
-				var var2 = 2;
-				return num * var2;
-			}
-
-			function multiply(func, num){
-				return func(num);
-			}
-
-			var triple = function(num){
-				return num * 3;
-			}
-
-			document.write("3 * 45 = ", multiply(triple, 45), "<br />");
-
-			function getSum(){
-				var sum = 0;
-
-				for(i = 0; i < arguments.length; i++){
-					sum += arguments[i];
-				}
-
-				 return sum;
-			}
-
-			document.write("Sum = ", getSum(1, 2, 3, 4, 5, 6), "<br />");
-
-			function times2(theArray){
-				var newArray = [];
-				for(i = 0; i < theArray.length; i++){
-					newArray.push(theArray[i] * 2);
-				}
-				return newArray
-			}
-
-						</script
+		</script
+		
+		<a href= "JavaScript:void(0)" one
 
 
 
@@ -223,11 +183,13 @@
 
 
 
-			
+
+
+
+
 
 
 
 		
 	</body>
-
 </html>
