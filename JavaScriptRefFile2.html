@@ -16,28 +16,69 @@
 		</style>
 	</head>
 	<body>
-	<script>
-
-<!--Event Handling-->
+	<!--Event Handling-->
+	<script> 
 		//http://www.w3schools.com/jsref/dom_obj_event.asp
 		
 		function openAlert(mess){
 			alert(mess);
 		}
-
-		
-
-
 		</script>
 		
 		<a href= "JavaScript:void(0)" onClick="alert('Hello');">SayHello</a><br />
 		<a href= "JavaScript:void(0)" onClick="openAlert('This used a function I created in script');">MyFunctionInScript</a><br />
+		<a href= "JavaScript:void(0)" onmouseover="this.style.color='red';"
+									   onmouseout="this.style.color='blue'"
+									   ondblclick="this.text='You double clicked me'"
+									   onmousedown="this.text='Don/'t press to hard'"
+									   onmouseup="this.text='Thank You'">Make Me Red</a><br />
 
+		
+		<input type="text" id="randInput"
+					onchange="var dataEntered=document.getElementById('randInput').value;
+					alert('User Typed ' + dataEntered)"
+		
+		<form action="#" id="sampForm">
 
+		<input id='charInput' type="text">
 
+		<p id='keyData'>Key Data here</p>
 
+		<input type="submit" value="Submit">
+		<input type="reset" value="Reset">
 
+		</form><br />		
+		
+		<img src="BangBangStudios3.png" id="logo">
 
+		<button id="logoButton">Get Logo</button>
+
+		<input id='mouseInput' type='text' size="30"><br />
+
+		Mouse X <input type="text" id="mouseX"><br />
+		Mouse Y <input type="text" id="mouseY"><br />
+
+		<script>
+		//Finds out if a character code was selected thats not supported for IE and other browsers
+		function getChar(event){
+			if(event.which == null){
+				return String.fromCharCode(event.keyCode);			
+		}else if(event.which != 0 && event.charCode != 0){
+			return String.fromCharCode(event.which);
+		}else{
+			return null;
+			}
+		}
+
+		document.getElementById('charInput').onKeyPress = 
+		function(event){
+			var char = getChar(event || window.event)
+			if(!char){ return false;}
+
+			document.getElementById('keyData').innerHtml = char + "was clicked";
+			return true;
+		}
+		</script>
 
 
 
